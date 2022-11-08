@@ -31,7 +31,7 @@ class ImageCapturer : BaseVideoCapturer(){
 
     val newFrame = object : Runnable {
         override fun run() {
-            Log.d("CAPTURER","Sending frame")
+            //Log.d("CAPTURER","Sending frame")
             provideIntArrayFrame(frame, ARGB,rawBitMap!!.width,rawBitMap!!.height,0,false)
             mHandler.postDelayed(this,1000L / fps)
         }
